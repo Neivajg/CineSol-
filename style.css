@@ -1,0 +1,54 @@
+* { /* valores a 0 del navegador para mÃ¡rgenes */
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+}
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header{
+    padding: 1.5em 0;
+
+}
+.principal{
+    background-image:url(./Img/principal2.jpeg);
+    width: 100vw ;
+    height: 100vw;
+    margin: 0;
+    padding: 0; 
+    background-repeat: no-repeat;
+    
+}
+.logotipo img{
+    height: 65px;
+}
+header nav a{
+    text-decoration: none;
+    color: rgb(251, 251, 251);
+    font-family: 'Bebas Neue';
+    font-size: 1.25rem;
+    margin-right: 20PX;
+}
+header nav a:hover{
+    color: #383434;
+}
+.registro, p{
+    color: whitesmoke;
+    padding: 20px;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    height: 300px; 
+    width: 300px;
+    border: 3px solid white;
+}
+
