@@ -1,2 +1,0 @@
-# CineSol-
-Proyecto Grupal 
