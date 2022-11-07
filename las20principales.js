@@ -86,3 +86,7 @@ for (let i = 0; i < movies.length; i++) {
     listaMovie += `<option value="">${movies[i].title}</option>`
 }
 selectListaPelis.innerHTML = listaMovie
+
+
+
+
