@@ -1,26 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactp CineSol</title>
+    <title>Contacto CineSol</title>
     <link rel="stylesheet" href="./styleContacto.css">
     <link rel="icon" href="./Img/icono.png" type="image/png">
 </head>
+
 <body>
     <header>
-        <div class="contenedor">
-            <a href="./index.html" class="logotipo"><img src="./Img/logo_cinesol_recortadoB.png" alt="Logo Cine Sol"></a>
+        <div class="barra">
+            <a href="./index.html" class="logotipo"><img src="Img/logo_cinesol_recortadoB.png" alt="Logo Cine Sol"></a>
             <nav>
-                <a href="./Cartelera.html">Cartelera</a>
-                <a href="./ranking.html">Ranking</a>
+                <a href="./index.html">Inicio</a>
+                <a href="./indexTodasLasPeliculas.html">Pelicula</a>
                 <a href="./Contacto.html">Contacto</a>
             </nav>
         </header>
 
-    <section class="FormContcUbic">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt repellat ipsum illum quisquam reiciendis odit aut minus, quos eum obcaecati sequi sapiente explicabo? Iste voluptate corporis iure deleniti pariatur aliquid quidem a dignissimos alias magnam enim dolorem laudantium nobis eveniet hic modi voluptatum, numquam sunt neque repellendus assumenda, cum quae dolor illo? Vel voluptatibus, corrupti, reiciendis harum ea explicabo veritatis incidunt ipsam accusamus tempora velit dolor inventore unde? Tempore deleniti temporibus voluptatibus. Molestias, est aut. Perferendis officia voluptatum laudantium. Beatae iure possimus vero praesentium consectetur placeat, dolor aspernatur tempora dicta nihil excepturi eveniet consequatur, quasi asperiores maxime labore dolorum corrupti in non at! Ullam quibusdam ducimus quae asperiores. Vitae voluptas, accusamus ipsum sunt dolores laborum velit maxime cumque natus tempore veniam, a nisi blanditiis voluptate distinctio. Illo magnam autem vero, ipsa architecto debitis similique fugiat exercitationem perspiciatis eos error mollitia expedita, perferendis aliquam, temporibus ex veniam. Pariatur ducimus, beatae fugiat repellendus nesciunt quo earum vero. Asperiores ratione quo id. Obcaecati est perspiciatis reprehenderit enim, assumenda cumque sunt culpa. Nam totam impedit maxime quis nulla officiis quasi, dolorum quo, odio vel inventore laboriosam odit officia quidem sunt voluptates molestiae veniam quia dolores quas, magnam assumenda. Doloremque commodi sapiente illum animi est!</p>
+    <main class="FormContcUbic">
+        <div id="divForm">
+
+            <!-- formulario contacto -->
+            <section class="sectionForm" id="formulario">
+                <form class="formulario">
+                <ol>
+                <li>
+                    <label>Nombre</label><br>
+                    <input type="text">
+                </li>
+                <br>
+                <li>
+                    <label>Correo electrónico</label><br>
+                    <input type="email">
+                </li>
+                <br>
+                <li>
+                     <label>Teléfono</label><br>
+                    <input type="tel">
+                </li>
+                <br>
+                <li>
+                    <label>Mensaje</label><br>
+                    <textarea maxlength="100"></textarea>
+                </li>
+                </ol>
+
+                <div class="formulario1">
+                    <input type="submit">
+                    <input type="reset">
+                </div>
+                </form>
             </section>
+
+            <div class="sectionForm" id="sectDiv">
+            
+                <!-- texto hostoria cinesol --> 
+                <section class="sectionForm" id="texto">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim illum molestias facilis fugiat nemo? Vero voluptatem molestias deserunt voluptate, officia, facilis perferendis quos itaque iste quis vitae, laborum quam quia!</p>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta eius fugit, quod est, amet dolore expedita architecto distinctio, soluta dolorem vel adipisci nam voluptatibus nostrum. Eveniet ipsum officiis odit quas!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia necessitatibus eum exercitationem culpa debitis aut. Eum, modi dolorem sapiente veniam culpa sunt optio voluptate enim ullam quasi beatae vero debitis?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut possimus repellat iusto doloribus asperiores! Unde, voluptatum labore officia error ipsam laboriosam laudantium maiores perferendis adipisci architecto sapiente magni quaerat distinctio?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, consectetur quae atque laborum deleniti perferendis odit obcaecati corrupti ex tenetur temporibus autem ipsa neque velit corporis culpa quos nam voluptates.</p>
+                </section>
+
+                <div class="sectionForm" id="ubicacion">
+
+                    <!-- ubicacion -->  
+                    <section class="sectionForm" id="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1389.055861708412!2d-118.3274760997747!3d34.10153852266907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bf3b59bb205f%3A0x85775770084cf53e!2sPaseo%20de%20la%20fama%20de%20Hollywood!5e0!3m2!1ses!2ses!4v1667404574243!5m2!1ses!2ses" width="500" height="100" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>   
+                    </section>
+
+                    <!-- direccion y tlf -->
+                    <section class="sectionForm" id="dirTlf">
+                        Hollywood Boulevard, Vine St, Los Angeles, CA 90028, Estados Unidos<br>
+                        +1 323-469-8311
+                    </section>
+
+                </div>    
+            </div>
+        </div>
+    </main>
 </body>
+
 </html>
