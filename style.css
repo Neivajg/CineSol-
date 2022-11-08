@@ -20,26 +20,6 @@ header{
     padding: 1.5em 0;
 }
 
-.principal{
-    background-color: #E0E0E0;
-    width: 100vw ;
-    height: 100vw;
-    margin: 0;
-    padding: 0; 
-    background-repeat: no-repeat;    
-}  
-
-.logotipo img{
-    height: 65px;
-}
-
-.barra{
-    width: 90%;
-    height: 50px;
-    margin: auto;
-    border: none;
-}
-    
 header nav a{
     text-decoration: none;
     color: rgb(251, 251, 251);
@@ -62,6 +42,29 @@ header{
     padding: 1.5em 0;
     background-color: #281F41;
 }
+
+header .barra{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border: none;
+}
+
+header .logotipo img{
+    height: 65px;
+}
+
+.principal{
+    background-color: #E0E0E0;
+    width: 100vw ;
+    height: 100vw;
+    margin: 0;
+    padding: 0; 
+    background-repeat: no-repeat;    
+}  
+
+
+    
 .grid p{
     width: fit-content;
     height: fit-content;
