@@ -62,9 +62,14 @@ header{
     padding: 1.5em 0;
     background-color: #281F41;
 }
-
+.grid p{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 0;
+   
+}
 p{
-    color: whitesmoke;
+    color: rgb(28, 26, 26);
     padding: 20px;
     font-size: 20px;
     margin-left: 100px;
@@ -73,16 +78,40 @@ p{
     width: 500px;
 }
 
-.registro{
-    border: 2px solid white ;
-    color: whitesmoke;
-        margin-left: 100px;
-    height: 45px;
-    width: 90px;
+#areaRegistro{
+border: 2px solid  rgb(28, 26, 26) ;
+color: rgb(28, 26, 26);
+margin-left: 100px;
+height: 100px;
+width: 250px;
+font-size: 15px;
+line-height:center;
+
+}
+ #areaUsuario{
+    position: relative;
+    border: 2px solid  rgb(28, 26, 26) ;
+    color: rgb(28, 26, 26);
+    margin-left: 100px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
     font-size: 15px;
     line-height:center;
+    display: none;
+ }
+ #areaUsuario p{
+    border:2px solid red;
+    width:250px ;
+    height:100px ;
+    
+ }
+.botonUsuario , .botonAdm{
+    display: none;
 }
-
+ #areaUsuario button{
+margin-left: 90px;
+ }
 /*--------------------- estilo de las 6 peliculas de cartelera------------------------*/
 .grid{
    display: flex;
