@@ -9,15 +9,15 @@ const btnSiguiente = document.querySelector("#btnSiguiente");
 btnSiguiente.addEventListener("click", function () {
     if (pagina<=1000) {
         pagina++;
-        cargarPeliculas();
+        cargarBDPeliculas();
     }
 })
 btnAnterior.addEventListener("click", function () {
     if (pagina > 1) {
         pagina--;
-        cargarPeliculas();
+        cargarBDPeliculas();
     }
-})
+})  
 
 
 // ----------------------fetch con las peliculas por genero-------------------------------
@@ -34,34 +34,6 @@ const generoPeli = async function () {
 }
 generoPeli();
 
-
-//------------------------------fetch con todas las peliculas populares
-const cargarBDPeliculas = async function () {
-    try{
-        const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=b9497f6dddc3b0606f3559d28ee7629a&page=${pagina}`);
-        const datosPeli = await respuesta.json()
-        console.log(datosPeli.results);//pelicula (solo me muestra las 20 primeras)
-        
-        localStorage.setItem("peliculas", JSON.stringify(datosPeli.results))
-
-        if (respuesta.status === 200) {
-            console.log(`Promesa recibida`);        
-        } else if(respuesta.status === 401){
-            console.log(`La key de Pipe no es correcta`)
-        } else if (respuesta.status === 404){
-            console.log(`No existe esa pelicula`)
-        } else{
-            console.log(`Error desconocido`)
-        }
-        
-    } catch (error){
-        console.log(error);
-    }
-}
-cargarBDPeliculas();
-
-
-
 const pintarPeliculas  = function() {
 
     const misPeliculas = JSON.parse(localStorage.getItem("peliculas"))
@@ -73,8 +45,6 @@ const pintarPeliculas  = function() {
 
     let todasPeliculas = "";
 
-    
-   
     let buttons = ""; 
     if(isLogged) {
         console.log("VAMOSS")
@@ -85,7 +55,6 @@ const pintarPeliculas  = function() {
         }
     }
     
-
     misPeliculas.forEach(pelicula => {
         todasPeliculas += 
         `<div class="pelicula">
@@ -98,7 +67,6 @@ const pintarPeliculas  = function() {
 
     document.querySelector("#contenedor").innerHTML = todasPeliculas
 
-    
     document.querySelectorAll('#contenedor .botonUsuario').forEach((boton) => {
 
         boton.addEventListener('click', function(e) {
@@ -106,18 +74,22 @@ const pintarPeliculas  = function() {
            // e.currentTarget.parentNode.style.display = 'none'
 
         })
-
-
     })  
-  
-   
-
 }
 pintarPeliculas()
 
 /*--------------------seleccion de peliculas-------------------*/
 let movies = JSON.parse(localStorage.getItem("pelicula"));
 console.log(movies);//peliculas 
+
+//agregar propiedad "enCartelera: true;"
+const moviesCar = movies.map((movie)=> {
+    
+    
+    return {...movie, enCartelera: true}
+    
+}) 
+console.log(moviesCar);
 
 let selectListaPelis = document.querySelector(".listaPeliculas");
 let listaMovie = "";
