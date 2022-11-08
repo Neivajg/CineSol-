@@ -1,36 +1,21 @@
-* { /* valores a 0 del navegador para mÃ¡rgenes */
+* {
+    /* valores a 0 del navegador para mÃ¡rgenes */
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-.contenedor{
+.logotipo img{
+    height: 65px;
+}
+
+.barra{
     width: 90%;
     height: 50px;
     margin: auto;
     border: none;
 }
 
-header .contenedor{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;   
-}
-header{
-    padding: 1.5em 0;
-
-}
-body{
-    background-image:url(./Img/principal2.jpeg);
-    width: 100vw ;
-    height: 100vw;
-    margin: 0;
-    padding: 0; 
-    background-repeat: no-repeat;   
-}
-.logotipo img{
-    height: 65px;
-}
 header nav a{
     text-decoration: none;
     color: rgb(251, 251, 251);
@@ -38,6 +23,95 @@ header nav a{
     font-size: 1.25rem;
     margin-right: 20PX;
 }
+
 header nav a:hover{
     color: #383434;
 }
+
+header .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    padding: 1.5em 0;
+    background-color: #281F41;
+}
+
+.contenedor {
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border: none;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo img {
+    height: 65px;
+}
+
+body {
+    background: #E0E0E0;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+.FormContcUbic {
+    width: 100%;
+    padding: 50px;
+}
+
+#divForm {
+    color: white;
+    display: flex;    
+    justify-content: space-between;
+    height: 400px;
+}
+
+/* formulario contacto*/
+#formulario {
+    margin-left: 25px;
+    width: 500px;
+    height: 400px;
+}
+
+#sectDiv {    
+    
+}
+
+#texto, #dirTlf, #formulario {
+    color: #1D1D1D; 
+}
+
+#ubicacion {
+    display: flex;
+    height: 300px;
+   
+}
+
+#mapa {
+    margin-top: 100px;
+}
+
+#dirTlf {
+    margin-left: 10px;
+    margin-top: 100px;
+}
+
+ol{
+    counter-reset: none;
+    list-style: none;
+}
+
+
+
+

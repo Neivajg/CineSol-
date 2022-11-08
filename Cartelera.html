@@ -15,10 +15,13 @@
               <a href="./index.html" class="logotipo"><img src="./Img/logo_cinesol_recortadoB.png" alt="Logo Cine Sol"></a>
               <nav>
                   <a href="./Cartelera.html">Cartelera</a>
-                  <a href="./ranking.html">Ranking</a>
+                  <a href="./ranking.html">Peliculas</a>
                   <a href="./Contacto.html">Contacto</a>
               </nav>
           </header>
+
+
+
 
 <main class="grid">
         <div class="uno">
@@ -42,40 +45,8 @@
     </main>
 <script>
 
-// const peliculas = document.querySelector("")
 
-//Siempre que se utiliza async y await , utilizar TRY y CATCH
-const cargarPeliculas= async() =>{
-  //Intenta ejecutarme ese codigo 
-    try{
-        const respuesta = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=5dfa558924d0c803dbef7f8540472232&language=es-ES");
-// console.log(respuesta);
-        //
-        if(respuesta.status === 200){
-            const datos = await respuesta.json();
+    <script src="cartelera.js"></script>
 
-            let peliculas='';
-            datos.results.forEach(pelicula => {
-                peliculas= peliculas + `<h1>${pelicula.title}</h1>`
-                console.log(pelicula.geners)
-            });
-
-            document.getElementsByClassName('grid').innerHTML=peliculas
-
-        }else if (respuesta.status === 401){
-            console.log("La Llave es incorrecta")
-        }else if (respuesta.status === 404){
-            console.log("La Pelicula: No Exite")
-        }else{
-            console.log("No sabemos que ocurrio")
-        }
-    }catch(error){// Sihay algun error CAtch va a intentar capturarme ese error
-
-
-}
-}
-
-cargarPeliculas()
-</script>
 </body>
 </html>
