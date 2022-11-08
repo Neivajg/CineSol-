@@ -1,3 +1,7 @@
+console.log(isLogged)
+console.log(isAdm)
+
+
 let pagina = 1;
 const btnAnterior = document.querySelector("#btnAnterior");
 const btnSiguiente = document.querySelector("#btnSiguiente");
@@ -32,31 +36,13 @@ generoPeli();
 
 
 //------------------------------fetch con todas las peliculas populares
-const cargarPeliculas = async function () {
+const cargarBDPeliculas = async function () {
     try{
         const respuesta = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=b9497f6dddc3b0606f3559d28ee7629a&page=${pagina}`);
         const datosPeli = await respuesta.json()
         console.log(datosPeli.results);//pelicula (solo me muestra las 20 primeras)
-
-        localStorage.setItem("pelicula", JSON.stringify(datosPeli.results))
         
-        let generosos = datosPeli.results.filter((pelicula) => {
-            return pelicula.genre_ids.includes(28)//28 es el id para el genero accion
-        });
-        console.log(generosos)//imprime las peliculas de accion con id 28
-
-        let posterPelicula = "";
-
-        datosPeli.results.forEach(pelicula => {
-            posterPelicula += 
-            `<div class="pelicula">
-                    <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"
-                
-                    <h3 class="titulo">${pelicula.title}</h3>
-                </div>`
-        });
-
-        document.querySelector("#contenedor").innerHTML = posterPelicula
+        localStorage.setItem("peliculas", JSON.stringify(datosPeli.results))
 
         if (respuesta.status === 200) {
             console.log(`Promesa recibida`);        
@@ -67,13 +53,67 @@ const cargarPeliculas = async function () {
         } else{
             console.log(`Error desconocido`)
         }
-
+        
     } catch (error){
         console.log(error);
     }
 }
-cargarPeliculas();
+cargarBDPeliculas();
 
+
+
+const pintarPeliculas  = function() {
+
+    const misPeliculas = JSON.parse(localStorage.getItem("peliculas"))
+   
+    // let generosos = datosPeli.results.filter((pelicula) => {
+    //     return pelicula.genre_ids.includes(28)//28 es el id para el genero accion
+    // });
+    // console.log(generosos)//imprime las peliculas de accion con id 28
+
+    let todasPeliculas = "";
+
+    
+   
+    let buttons = ""; 
+    if(isLogged) {
+        console.log("VAMOSS")
+        if(isAdm) {
+            buttons = `<button class="botonAdm">botón Adm</button>`  
+        } else {
+            buttons = `<button class="botonUsuario">botón usuario</button>`
+        }
+    }
+    
+
+    misPeliculas.forEach(pelicula => {
+        todasPeliculas += 
+        `<div class="pelicula">
+                <img class="poster" src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}"
+            
+                <h3 class="titulo">${pelicula.title}</h3>
+                ${buttons}
+            </div>`
+    });
+
+    document.querySelector("#contenedor").innerHTML = todasPeliculas
+
+    
+    document.querySelectorAll('#contenedor .botonUsuario').forEach((boton) => {
+
+        boton.addEventListener('click', function(e) {
+
+           // e.currentTarget.parentNode.style.display = 'none'
+
+        })
+
+
+    })  
+  
+   
+
+}
+pintarPeliculas()
 
 /*--------------------seleccion de peliculas-------------------*/
 let movies = JSON.parse(localStorage.getItem("pelicula"));
