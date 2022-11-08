@@ -9,28 +9,37 @@
     height: 50px;
     margin: auto;
 }
+
 header .contenedor{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;    
 }
+
 header{
     padding: 1.5em 0;
-
 }
+
 .principal{
-    background-image:url(../Img/principal2.jpeg);
+    background-color: #E0E0E0;
     width: 100vw ;
     height: 100vw;
     margin: 0;
     padding: 0; 
-    background-repeat: no-repeat;
-    
-}
+    background-repeat: no-repeat;    
+}  
+
 .logotipo img{
     height: 65px;
 }
+
+.barra{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border: none;
+}
+    
 header nav a{
     text-decoration: none;
     color: rgb(251, 251, 251);
@@ -38,9 +47,22 @@ header nav a{
     font-size: 1.25rem;
     margin-right: 20PX;
 }
+
 header nav a:hover{
     color: #383434;
 }
+    
+header .barra{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+header{
+    padding: 1.5em 0;
+    background-color: #281F41;
+}
+
 p{
     color: whitesmoke;
     padding: 20px;
@@ -75,12 +97,20 @@ line-height:center;
 
 .grid div{
     width: 150px;
-
 }
 
 .grid img{
     width: 100%;
     border-radius: 7px;
+}
+
+.uno, .dos, .tres, .cuatro, .cinco, .seis{
+    border-color: #281F41;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 
