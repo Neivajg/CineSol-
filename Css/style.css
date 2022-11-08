@@ -55,12 +55,15 @@ p{
 border: 2px solid white ;
 color: whitesmoke;
 margin-left: 100px;
-height: 45px;
-width: 90px;
+height: 100px;
+width: 250px;
 font-size: 15px;
 line-height:center;
 
 }
+ #areaUsuario{
+    display: none;
+ }
 
 /*--------------------- estilo de las 6 peliculas de cartelera------------------------*/
 .grid{
