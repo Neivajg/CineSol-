@@ -20,26 +20,6 @@ header{
     padding: 1.5em 0;
 }
 
-.principal{
-    background-color: #E0E0E0;
-    width: 100vw ;
-    height: 100vw;
-    margin: 0;
-    padding: 0; 
-    background-repeat: no-repeat;    
-}  
-
-.logotipo img{
-    height: 65px;
-}
-
-.barra{
-    width: 90%;
-    height: 50px;
-    margin: auto;
-    border: none;
-}
-    
 header nav a{
     text-decoration: none;
     color: rgb(251, 251, 251);
@@ -63,8 +43,36 @@ header{
     background-color: #281F41;
 }
 
+header .barra{
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    border: none;
+}
+
+header .logotipo img{
+    height: 65px;
+}
+
+.principal{
+    background-color: #E0E0E0;
+    width: 100vw ;
+    height: 100vw;
+    margin: 0;
+    padding: 0; 
+    background-repeat: no-repeat;    
+}  
+
+
+    
+.grid p{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 0;
+   
+}
 p{
-    color: whitesmoke;
+    color: rgb(28, 26, 26);
     padding: 20px;
     font-size: 20px;
     margin-left: 100px;
@@ -73,9 +81,9 @@ p{
     width: 500px;
 }
 
-.registro{
-border: 2px solid white ;
-color: whitesmoke;
+#areaRegistro{
+border: 2px solid  rgb(28, 26, 26) ;
+color: rgb(28, 26, 26);
 margin-left: 100px;
 height: 100px;
 width: 250px;
@@ -84,9 +92,29 @@ line-height:center;
 
 }
  #areaUsuario{
+    position: relative;
+    border: 2px solid  rgb(28, 26, 26) ;
+    color: rgb(28, 26, 26);
+    margin-left: 100px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    font-size: 15px;
+    line-height:center;
     display: none;
  }
-
+ #areaUsuario p{
+    border:2px solid red;
+    width:250px ;
+    height:100px ;
+    
+ }
+.botonUsuario , .botonAdm{
+    display: none;
+}
+ #areaUsuario button{
+margin-left: 90px;
+ }
 /*--------------------- estilo de las 6 peliculas de cartelera------------------------*/
 .grid{
    display: flex;

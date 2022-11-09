@@ -5,58 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSol</title>
-    <link rel="stylesheet" href="./Css/style.css">
-    <link rel="icon" href="./Img/icono.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Img/icono.png" type="image/png">
 </head>
 <body>
 
     <section class="principal">
-      <!--Añadir imagen pantalla completa
-      <header>
-        <div class="contenedor">
-            <a href="./index.html" class="logotipo"><img src="./Img/logo_cinesol_recortadoB.png" alt="Logo Cine Sol"></a>
-            <nav>
-                <a href="./index.html">Inicio</a>
-                <a href="./indexTodasLasPeliculas.html">Pelicula</a>
-                <a href="./Contacto.html">Contacto</a>
-            </nav>
-        </header> -->
         <header>
             <div class="barra">
-                <a href="./index.html" class="logotipo"><img src="Img/logo_cinesol_recortadoB.png" alt="Logo Cine Sol"></a>
+                <a href="index.html" class="logotipo"><img src="Img/logo_cinesol_recortadoB.png" alt="Logo Cine Sol"></a>
                 <nav>
-                    <a href="./index.html">Inicio</a>
-                    <a href="indexTodasLasPeliculas.html">Peliculas</a>
-                    <a href="./Contacto.html">Contacto</a>
+                    <a href="index.html">Inicio</a>
+                    <a href="las20principales.html">Peliculas</a>
+                    <a href="Contacto.html">Contacto</a>
                 </nav>
             </header>
 
         <main class="grid">
             <div class="uno">
                 <h2>Sala 1</h2>
-                <a href="./" class=""><img src="" alt="imagen"></a> 
-                <button id="favorito">botón Favorito</button>
+                <a href="./" class=""><img src="" alt="imagen"></a>
+                <p>peli Terror</p>
+              <button class="botonUsuario">botón usuario</button>
+                <button class="botonAdm">botón Adm</button>
             </div>
-            <div class="dos">
+            <!-- <div class="dos">
                 <h2>Sala 2</h2>
-                <a href="./" class=""><img src="" alt="imagen"></a> 
+                <a href="./" class=""><img src="" alt="imagen"></a>
+                <p>peli Terror</p>
+                 <button class="botonUsuario">botón usuario</button>
+                <button class="botonAdm">botón Adm</button>
             </div>
             <div class="tres">
                 <h2>Sala 3</h2>
-                <a href="./" class=""><img src="" alt="imagen"></a> 
+                <a href="./" class=""><img src="" alt="imagen"></a>
+                <p>peli Terror</p>
+                 <button class="botonUsuario">botón usuario</button>
+                <button class="botonAdm">botón Adm</button> 
             </div>
             <div class="cuatro">
                 <h2>Sala 4</h2>
                 <a href="./" class=""><img src="" alt="imagen"></a> 
+                <p>peli Terror</p>
+                 <button class="botonUsuario">botón usuario</button>
+                <button class="botonAdm">botón Adm</button>
             </div>
             <div class="cinco">
                 <h2>Sala 5</h2>
                 <a href="./" class=""><img src="" alt="imagen"></a> 
+                <p>peli Terror</p>
+                <button class="botonUsuario">botón usuario</button>
+                <button class="botonAdm">botón Adm</button>
             </div>
             <div class="seis">
                 <h2>Sala 6</h2>
-                <a href="./" class=""><img src="" alt="imagen"></a> 
-            </div>
+                <a href="./" class=""><img src="" alt="imagen"></a>
+                <p>peli Terror</p>
+                <button class="botonUsuario">botón usuario</button>
+                <button class="botonAdm">botón Adm</button>
+            </div> -->
         </main>
     
             
@@ -71,15 +78,17 @@
             </form>
         </div>
         <div id="areaUsuario">
-             <button id="deslogear" type="submit" >deslogear</button>
+            
              <p id="nombreUsuario">Neiva Jimenez </p>
+             <p>Lista de peliculas favoritas:</p>
              <p id="peliculasFavoritas">Favoritas</p>
+             <button id="deslogear" type="submit" >deslogear</button>
         </div>
     </section>
-        
-        <script src="./loginNe.js"></script>
-        <script src="script.js"></script>
+        <script scc="data.js"></script>
+        <script src="checkLogin.js"></script>
+        <script src="loginNe.js"></script>
+        <script src="las20principales.js"></script>
         <script src="cartelera.js"></script>
-
     </body> 
 </html>
